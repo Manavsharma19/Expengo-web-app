@@ -29,7 +29,9 @@ const Signup = () => {
  
  // As explained in the Login page.
  const onSubmit = async () => {
-   try {
+  console.log(form) 
+  try {
+    
      const user = await emailPasswordSignup(form.email, form.password);
      if (user) {
        redirectNow();

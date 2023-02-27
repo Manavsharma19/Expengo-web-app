@@ -55,6 +55,7 @@ const Login = () => {
  
  // This function gets fired when the user clicks on the "Login" button.
  const onSubmit = async (event) => {
+  console.log(form) 
    try {
      // Here we are passing user details to our emailPasswordLogin
      // function that we imported from our realm/authentication.js
