@@ -4,7 +4,7 @@ import { UserContext } from '../contexts/user.context';
 import Typography from '@material-ui/core/Typography';
 import Slider from '@mui/material/Slider';
 import Box from '@mui/material/Box';
-
+import Cards from '../components/Cards';
 
 
  
@@ -60,19 +60,20 @@ export default function Home() {
 
      </Typography>
 
-     <Box width={500}   >
+     
+     <Box sx={{ justifyContent: 'center' }}>
+      
       <Typography>Attention</Typography>
       <Slider 
         defaultValue={50}
-        aria-valuetelabel="default"
         valueLabelDisplay="auto" 
+        align='center'
         />
     </Box>
      <Box width={500}   >
       <Typography>Stress</Typography>
       <Slider 
         defaultValue={50}
-        aria-valuetelabel="Attention"
         valueLabelDisplay="auto" 
         />
     </Box>
@@ -80,7 +81,6 @@ export default function Home() {
       <Typography>Sleepiness</Typography>
       <Slider 
         defaultValue={50}
-        aria-valuetelabel="Attention"
         valueLabelDisplay="auto" 
         />
     </Box>
@@ -88,10 +88,10 @@ export default function Home() {
       <Typography>Happy</Typography>
       <Slider 
         defaultValue={50}
-        aria-valuetelabel="Attention"
         valueLabelDisplay="auto" 
         />
     </Box>
+    <Cards/>
 
    </>
  )
