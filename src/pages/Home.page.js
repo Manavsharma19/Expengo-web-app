@@ -1,17 +1,16 @@
 import { Button } from '@mui/material'
 import { useContext } from 'react';
 import { UserContext } from '../contexts/user.context';
+import Typography from '@material-ui/core/Typography';
+
  
 export default function Home() {
  const { logOutUser } = useContext(UserContext);
  
- // This function is called when the user clicks the "Logout" button.
  const logOut = async () => {
    try {
-     // Calling the logOutUser function from the user context.
      const loggedOut = await logOutUser();
-     // Now we will refresh the page, and the user will be logged out and
-     // redirected to the login page because of the <PrivateRoute /> component.
+   
      if (loggedOut) {
        window.location.reload(true);
      }
@@ -22,8 +21,24 @@ export default function Home() {
  
  return (
    <>
-     <h1>Welcome to Expengo</h1>
+     
+     <Typography 
+     variant="h1"
+     color='primary'
+     align='center'
+     >
+        Welcome to Expengo
+
+     </Typography>
+
+     <Typography 
+     variant='h1'
+     align='center'
+     >
      <Button variant="contained" onClick={logOut}>Logout</Button>
+
+     </Typography>
+
    </>
  )
 }
