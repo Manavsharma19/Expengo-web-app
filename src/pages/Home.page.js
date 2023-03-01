@@ -6,15 +6,14 @@ import Slider from '@mui/material/Slider';
 import Box from '@mui/material/Box';
 import Cards from '../components/Cards';
 
-
  
 export default function Home() {
- const { logOutUser } = useContext(UserContext);
- 
- const logOut = async () => {
+  const { logOutUser } = useContext(UserContext);
+
+  const logOut = async () => {
    try {
      const loggedOut = await logOutUser();
-   
+
      if (loggedOut) {
        window.location.reload(true);
      }
@@ -26,9 +25,9 @@ export default function Home() {
  return (
    <>
      
-     {/* <Typography 
-     variant="h1"
-     color='primary'
+    <Typography 
+     variant="h2"
+     color='secondary'
      align='center'
      >
         Welcome to Expengo
@@ -41,55 +40,41 @@ export default function Home() {
      >
      <Button variant="contained" onClick={logOut}>Logout</Button>
 
-     </Typography> */}
-
-<Typography 
-     variant="h3"
-     color='secondary'
-     align='center'
-     >
-        Welcome to Expengo
-
-     </Typography>
-
-     <Typography 
-     variant='h2'
-     align='center'
-     >
-     <Button variant="contained" onClick={logOut}>Logout</Button>
-
      </Typography>
 
      
-     <Box sx={{ justifyContent: 'center' }}>
+     <Box sx={{ justifyContent: 'center', paddingInline: '500px' }}>
       
       <Typography>Attention</Typography>
       <Slider 
-        defaultValue={50}
+        defaultValue={0}
         valueLabelDisplay="auto" 
         align='center'
         />
     </Box>
-     <Box width={500}   >
+    <Box sx={{ justifyContent: 'center', paddingInline: '500px' }}>
       <Typography>Stress</Typography>
       <Slider 
-        defaultValue={50}
+        defaultValue={0}
         valueLabelDisplay="auto" 
         />
     </Box>
-     <Box width={500}   >
+    <Box sx={{ justifyContent: 'center', paddingInline: '500px' }}>
       <Typography>Sleepiness</Typography>
       <Slider 
-        defaultValue={50}
+        defaultValue={0}
         valueLabelDisplay="auto" 
         />
     </Box>
-     <Box width={500}   >
+    <Box sx={{ justifyContent: 'center', paddingInline: '500px' }}>
       <Typography>Happy</Typography>
       <Slider 
-        defaultValue={50}
+        defaultValue={0}
         valueLabelDisplay="auto" 
         />
+   
+
+
     </Box>
     <Cards/>
 
