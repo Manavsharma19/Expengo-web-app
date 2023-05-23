@@ -1,3 +1,7 @@
+This is a simple web-app I made to practice React.js. Additionally I connected it with mongoDB.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
